@@ -101,4 +101,4 @@ The query must return the following columns:
 ## 🛠️ Credits & Support
 Developed by **PPR DEVELOPMENT**. 
 
-For questions, issues, or suggestions, please open an issue in the repository or contact support.
+For questions, issues, or suggestions, please open an issue in the repository or contact via discord. ||username:-pratheekreddy||
