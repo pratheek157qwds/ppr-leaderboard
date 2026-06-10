@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Leaderboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="leaderboard-nui" class="leaderboard-screen">
+        <div class="leaderboard-modal">
+            <div class="radial-glow glow-1"></div>
+            <div class="radial-glow glow-2"></div>
+            
+            <header class="leaderboard-header">
+                <div class="header-titles">
+                    <div class="badge-icon ppr-logo-badge">
+                        <svg viewBox="0 0 100 100" class="ppr-logo-svg" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="44" stroke="url(#ppr-ring-grad)" stroke-width="8" fill="none"/>
+                            <text x="50" y="61" font-family="'Outfit', sans-serif" font-size="34" font-weight="900" fill="url(#ppr-text-grad)" text-anchor="middle" letter-spacing="-0.5">PPR</text>
+                            <defs>
+                                <linearGradient id="ppr-ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7c5ce8" />
+                                    <stop offset="100%" stop-color="#ffd700" />
+                                </linearGradient>
+                                <linearGradient id="ppr-text-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff" />
+                                    <stop offset="100%" stop-color="#ccbeff" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 id="server-title">PPR LEADERBOARD</h1>
+                        <p class="subtitle">Top 10 Wealthiest Citizens</p>
+                    </div>
+                </div>
+                <button class="close-btn" id="close-button" title="Close Leaderboard (ESC)">
+                    <span class="material-icons-round">close</span>
+                </button>
+            </header>
+
+            <div class="leaderboard-content">
+                <section class="podium-container" id="podium-section">
+                    <div class="podium-pedestal rank-2" id="podium-rank-2">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-ring">
+                                <img src="" alt="2nd Place" class="player-avatar" id="avatar-2">
+                                <span class="avatar-fallback material-icons-round">person</span>
+                            </div>
+                            <div class="rank-badge">2</div>
+                        </div>
+                        <div class="pedestal-block">
+                            <h3 class="player-name" id="name-2">Loading...</h3>
+                            <p class="player-wealth" id="wealth-2">$0</p>
+                            <div class="wealth-breakdown" id="breakdown-2">
+                                <span>Cash: $0</span>
+                                <span>Bank: $0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="podium-pedestal rank-1" id="podium-rank-1">
+                        <div class="crown-icon">
+                            <span class="material-icons-round">workspace_premium</span>
+                        </div>
+                        <div class="avatar-wrapper">
+                            <div class="avatar-ring">
+                                <img src="" alt="1st Place" class="player-avatar" id="avatar-1">
+                                <span class="avatar-fallback material-icons-round">person</span>
+                            </div>
+                            <div class="rank-badge">1</div>
+                        </div>
+                        <div class="pedestal-block">
+                            <h3 class="player-name" id="name-1">Loading...</h3>
+                            <p class="player-wealth" id="wealth-1">$0</p>
+                            <div class="wealth-breakdown" id="breakdown-1">
+                                <span>Cash: $0</span>
+                                <span>Bank: $0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="podium-pedestal rank-3" id="podium-rank-3">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-ring">
+                                <img src="" alt="3rd Place" class="player-avatar" id="avatar-3">
+                                <span class="avatar-fallback material-icons-round">person</span>
+                            </div>
+                            <div class="rank-badge">3</div>
+                        </div>
+                        <div class="pedestal-block">
+                            <h3 class="player-name" id="name-3">Loading...</h3>
+                            <p class="player-wealth" id="wealth-3">$0</p>
+                            <div class="wealth-breakdown" id="breakdown-3">
+                                <span>Cash: $0</span>
+                                <span>Bank: $0</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="list-container">
+                    <div class="list-header">
+                        <div class="col-rank">RANK</div>
+                        <div class="col-player">CITIZEN</div>
+                        <div class="col-wealth text-right">NET WORTH</div>
+                    </div>
+                    <div class="list-rows" id="list-rows-container">
+                        <div class="loading-state">
+                            <span class="material-icons-round spinner">sync</span>
+                            <p>Querying financial databases...</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="leaderboard-footer">
+                <div class="economy-summary">
+                    <span class="material-icons-round">account_balance</span>
+                    <span class="summary-label">Total Economy Circulation:</span>
+                    <span class="summary-value" id="total-circulation">$0</span>
+                </div>
+                <div class="instruction">
+                    <span class="brand-credits">PPR DEVELOPMENT &copy; 2026</span>
+                    <span>Press <kbd>ESC</kbd> or click the Close button to exit</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
